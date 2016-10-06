@@ -291,7 +291,7 @@ public class LocationActivity extends AppCompatActivity implements GoogleApiClie
     public void onLocationChanged(Location location) {
         mLastUpdateTime = String.valueOf(System.currentTimeMillis());
         mLastLocation = location;
-//        fetchAddressButtonHandler(null);
+        fetchAddressButtonHandler(null);
         updateUI();
     }
 
@@ -361,7 +361,7 @@ public class LocationActivity extends AppCompatActivity implements GoogleApiClie
     }
 
 
-    class AddressResultReceiver extends ResultReceiver {
+    public class AddressResultReceiver extends ResultReceiver {
         public AddressResultReceiver(Handler handler) {
             super(handler);
         }
